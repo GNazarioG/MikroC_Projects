@@ -1,0 +1,45 @@
+/* Resolução da questão 2
+   Grupo: Antonio Agostinho, Bruno Correia, Gabriel Nazario, josé Gabriel e
+   Saulo Durães*/
+#define BOTAO1 RA1
+
+int set = 0;
+
+void lig ();
+
+void main (){
+TRISB = 0b000000000;
+PORTB = 0b000111111;
+
+while (1){
+if (PORTA.BOTAO1 == 0){
+Delay_ms (200);
+set=set+1;
+lig ();}}}
+
+void lig() {
+if (set == 1){
+PORTB = 0b000111111; //digito 0
+Delay_ms(200);
+PORTB = 0b00000110; //digito 1
+Delay_ms(200);
+PORTB = 0b01011011; //digito 2
+Delay_ms(200);
+PORTB = 0b01001111; //digito 3
+Delay_ms(200);
+PORTB = 0b01100110; //digito 4
+Delay_ms(200);
+PORTB = 0b01101101; //digito 5
+Delay_ms(200);
+PORTB = 0b01111101; //digito 6
+Delay_ms(200);
+PORTB = 0b00000111; //digito 7
+Delay_ms(200);
+PORTB = 0b01111111; //digito 8
+Delay_ms(200);
+PORTB = 0b011101111;} //digito 9
+
+if (set == 2){
+set=0;}
+if (set == 0){
+PORTB = 0b000111111;}}
